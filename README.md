@@ -4,14 +4,14 @@ I am very much in love with this project because even if the coding part is not 
 
 Seesonss is a fast-growing clothing brand based in Alicante focused on premium quality garments inspired by Londons subcultures and urban scene and I'm proud to say I form part of the team that works on the brand. I developed this discord bot as a way to manage and better develop the community that is being cultivated around the brand. this might be the barebones of a long-lived project as this bot will be in constant development as new challenges and ideas may arise. 
 
-PD: [go buy Seesonss](https://seesonss.com)
+[Go buy Seesonss](https://seesonss.com)
 
+## Overview
+A Discord bot that integrates with Shopify to provide real-time stock updates and generate discount codes through interactive chat commands. The bot also includes a role-based progression system.
 [![Python](https://img.shields.io/badge/Python-3.9+-blue.svg)](https://www.python.org)
 [![Discord.py](https://img.shields.io/badge/Discord.py-2.0+-blue.svg)](https://discordpy.readthedocs.io/)
 [![Shopify API](https://img.shields.io/badge/Shopify_API-2024--10-green.svg)](https://shopify.dev/api)
 
-## Overview
-A Discord bot that integrates with Shopify to provide real-time stock updates and generate discount codes through interactive chat commands. The bot also includes a role-based progression system.
 
 ## Features
 - 🔄 Real-time stock monitoring
