@@ -24,20 +24,132 @@ A Discord bot that integrates with Shopify to provide real-time stock updates an
 - requests for API calls
 - asyncio for asynchronous operations
 
-## API Integration
-### Shopify API
-The bot interacts with Shopify's Admin API to:
-- Monitor inventory levels
-- Generate discount codes
-- Track product updates
-- Manage price rules
+## How It Works
 
-### Discord API 
-Uses Discord.py for:
-- Message handling
-- Role management
-- User interactions
-- Channel monitoring
+### API Integration
+#### Shopify API
+The bot makes regular API calls to Shopify's Admin API to:
+
+1. **Inventory Monitoring**:
+   - Polls inventory levels every 60 seconds
+   - Tracks changes in stock quantities
+   - Maintains a record of previous stock levels
+   - Uses batch processing for efficiency (100 items per request)
+
+2. **Discount Code Generation**:
+   - Creates unique 15-character codes
+   - Applies percentage-based discounts
+   - Sets usage limits and expiration
+   - Manages price rules through API
+
+Example of inventory check:
+```python
+inventory_url = f"https://{SHOPIFY_SHOP_NAME}.myshopify.com/admin/api/2024-10/inventory_levels.json"
+params = {"inventory_item_ids": ",".join(map(str, batch_ids))}
+```
+
+#### Discord API 
+Uses Discord.py events and commands:
+
+1. **Message Handling**:
+   - `on_message` event for chat monitoring
+   - Command prefix: `!` for bot commands
+   - Channel-specific message processing
+
+2. **Role Management**:
+   - `on_member_update` event tracking
+   - Automatic role progression
+   - Role-based permissions
+
+### Stock Monitoring System
+The stock monitoring works through multiple components:
+
+1. **Product Tracking**:
+   - Maintains list of active products
+   - Tracks individual variants
+   - Maps inventory items to products
+
+2. **Change Detection**:
+   - Compares current vs previous stock
+   - Filters significant changes
+   - Batches updates for efficiency
+
+3. **Notification System**:
+   - Channel: #flare-raffles
+   - Formats: "@everyone Stock update!"
+   - Includes product name and quantity
+
+### Discount Generation System
+The discount system uses a dynamic probability model:
+
+1. **Probability Management**:
+   - Base probability: 1%
+   - Increments: 0.3% per message
+   - Resets after code generation
+
+2. **Cooldown System**:
+   - 60-second global cooldown
+   - Per-user tracking
+   - Prevents spam/abuse
+
+3. **Discount Tiers**:
+```python
+DISCOUNT_AMOUNTS = {
+    5: 0.4,   # 40% chance
+    10: 0.4,  # 40% chance
+    15: 0.15, # 15% chance
+    20: 0.05  # 5% chance
+}
+```
+
+### Role Progression System
+Hierarchical role structure:
+
+1. **Role Levels**:
+```python
+ROLE_RANKS = {
+    "s'cout": 1,
+    "s'oldier": 2, 
+    "s'enior": 3,
+    "s'iso": 4
+}
+```
+
+2. **Progression Logic**:
+   - Automatic role upgrades
+   - Activity-based progression
+   - DM notifications on level-up
+
+### Channel Management
+Channel-specific functionalities:
+
+1. **Monitored Channels**:
+   - #general: Basic interaction
+   - #fitpics: Community engagement
+   - #flare-raffles: Stock updates
+
+2. **Channel Permissions**:
+   - Role-based access control
+   - Command restrictions
+   - Message monitoring
+
+### Error Handling System
+Comprehensive error management:
+
+1. **API Errors**:
+   - Rate limit handling
+   - Connection retry logic
+   - Error logging system
+
+2. **Discord Errors**:
+   - Permission checks
+   - Command validation
+   - Event error handling
+
+3. **Recovery Methods**:
+   - Automatic reconnection
+   - State preservation
+   - Error notifications
 
 ## Installation
 1. Clone the repository
