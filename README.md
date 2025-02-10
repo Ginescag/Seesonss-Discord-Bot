@@ -1,4 +1,4 @@
-# <p align="center"> <img src="https://github.com/user-attachments/assets/5633c04d-418e-46fe-950e-d0ca165cf443" /> </p>
+# <p align="center"> <img src="https://github.com/user-attachments/assets/5633c04d-418e-46fe-950e-d0ca165cf443" /> <br> S Bot </p>
 
 I am very much in love with this project because even if the coding part is not anything special, it combines 2 completely different worlds that I very much enjoy, FASHION AND PROGRAMMING YAYY! 
 
