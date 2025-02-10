@@ -2,9 +2,7 @@
 
 I am very much in love with this project because even if the coding part might not be anything special, it combines 2 completely different worlds that I very much enjoy, FASHION AND PROGRAMMING YAYY! 
 
-Seesonss is a fast-growing clothing brand based in Alicante focused on premium quality garments inspired by Londons subcultures and urban
-scene and I'm proud to say I form part of the team that works on the brand. I developed this discord bot as a way to manage and better develop
-the community that is being cultivated around the brand. this might be the barebones of a long-lived project as this bot will be in constant development as new challenges and ideas may arise!
+Seesonss is a fast-growing clothing brand based in Alicante focused on premium quality garments inspired by Londons subcultures and urban scene and I'm proud to say I form part of the team that works on the brand. I developed this discord bot as a way to manage and better develop the community that is being cultivated around the brand. this might be the barebones of a long-lived project as this bot will be in constant development as new challenges and ideas may arise!
 
 PD: go buy Seesonss https://seesonss.com
 
