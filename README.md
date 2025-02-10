@@ -171,7 +171,6 @@ python Sbot.py
 
 ## Commands
 - `!ping` - Check if bot is running
-- `!hola` - Greeting command
 
 ## Stock Monitoring
 The bot continuously monitors Shopify inventory through the `monitor_stock_changes()` function and sends notifications to specified Discord channels when changes are detected.
@@ -194,7 +193,6 @@ Discounts are generated based on user activity and random probability with the f
 | 20%      | 5%         |
 
 The system includes:
-- 60-second cooldown between discount generations
 - Random probability that increases over time
 - Automatic code expiration
 
@@ -217,7 +215,7 @@ Each role represents a different level in the community hierarchy and may grant 
 The bot actively monitors these channels:
 - general
 - fitpics
-- flare-raffles
+
 
 ## Error Handling
 The bot includes comprehensive error handling for:
