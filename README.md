@@ -8,6 +8,7 @@ Seesonss is a fast-growing clothing brand based in Alicante focused on premium q
 
 ## Overview
 A Discord bot that integrates with Shopify to provide real-time stock updates and generate discount codes through interactive chat commands. The bot also includes a role-based progression system.
+
 [![Python](https://img.shields.io/badge/Python-3.9+-blue.svg)](https://www.python.org)
 [![Discord.py](https://img.shields.io/badge/Discord.py-2.0+-blue.svg)](https://discordpy.readthedocs.io/)
 [![Shopify API](https://img.shields.io/badge/Shopify_API-2024--10-green.svg)](https://shopify.dev/api)
